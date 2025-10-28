@@ -1,94 +1,84 @@
 
+/* ========== BASE STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 0;
-  background-color: #f9fafc;
-  color: #1a1a1a;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.5;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
+/* ========== HEADER ========== */
 .header {
-  background-color: #f3f3f3;
-  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #fff;
   border-bottom: 1px solid #e0e0e0;
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.header__logo img {
+  height: 28px;
 }
 
-.header__logo img {
-  width: 100px;
+.header__icons-group {
+  display: flex;
+  gap: 10px;
 }
 
 .header__icon {
   background: none;
   border: none;
-  padding: 0.5rem;
+  cursor: pointer;
 }
 
-.header__icons-group {
-  display: flex;
-  gap: 0.5rem;
+.header__icon img {
+  width: 22px;
+  height: 22px;
 }
 
-/*  Tabs (scrollable on mobile)  */
-.tabs {
-  margin: 1rem 0;
-  overflow-x: auto;
+/* MOBILE VISIBILITY (default 320px) */
+.header__icon--request {
+  display: none; /* hidden on mobile */
 }
 
-.tabs__list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 1rem;
-}
-
-.tabs__item {
-  flex: 0 0 auto;
-}
-
-.tabs__link {
-  text-decoration: none;
-  color: #333;
-  padding-bottom: 4px;
-  font-weight: 500;
-  border-bottom: 2px solid transparent;
-}
-
-.tabs__item--active .tabs__link {
-  border-bottom: 2px solid #04c27f;
-  color: #04c27f;
-}
-
-/* Services Section */
-.services {
-  padding: 1rem;
+/* ========== MAIN ========== */
+.main {
+  padding: 16px;
 }
 
 .services__title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  position: relative;
+  margin-bottom: 1rem;
 }
 
-.services__title::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 18px;
-  background-color: #04c27f;
-  margin-right: 6px;
-  vertical-align: middle;
+/* Scrollable horizontal menu */
+.services__menu {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.services__menu-item {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: none;
+  padding: 6px 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.services__menu-item:hover {
+  background-color: #f1f1f1;
 }
 
 .services__content {
@@ -97,33 +87,49 @@ img {
   gap: 1rem;
 }
 
-.services__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+.services__text p {
+  margin-bottom: 0.7rem;
+}
+
+.services__readmore {
+  display: inline-block;
+  color: #00aa7f;
+  font-weight: 700;
   text-decoration: none;
-  color: #04c27f;
-  font-weight: 500;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .services__image img {
-  border-radius: 4px;
+  width: 100%;
+  border-radius: 8px;
+  display: block;
 }
 
-/* Desktop View */
+/* ========== TABLET / DESKTOP (≥768px) ========== */
 @media (min-width: 768px) {
-  .header__container {
-    justify-content: space-between;
+  /* Header adjustments */
+  .header {
+    padding: 12px 40px;
   }
 
-  .header__icons-group {
-    gap: 1rem;
+  .header__icon--menu {
+    display: none; /* hide menu icon */
   }
 
+  .header__icon--request {
+    display: inline-block; /* show on desktop */
+  }
+
+  .header__logo img {
+    height: 36px;
+  }
+
+  /* Layout side-by-side */
   .services__content {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
   }
 
   .services__text {
@@ -135,10 +141,38 @@ img {
   }
 
   .services__title {
-    font-size: 1.5rem;
-  }
-
-  .tabs__list {
-    justify-content: flex-start;
+    font-size: 1.8rem;
   }
 }
+
+/* ========== LARGE SCREEN (≥1200px) ========== */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: 20px 80px;
+  }
+
+  .services__title {
+    font-size: 2rem;
+  }
+
+  .services__text p {
+    font-size: 1.1rem;
+  }
+
+  .services__menu-item {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .services__image img {
+    max-width: 500px;
+  }
+}
+
+
+
