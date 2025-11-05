@@ -12,6 +12,11 @@ body {
   line-height: 1.5;
 }
 
+.marker {
+  display: flex;
+  justify-content: flex-start;
+
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -25,25 +30,26 @@ body {
   height: 28px;
 }
 
-.header__icons-group {
+.header__icons {
   display: flex;
+  justify-content: flex-end;
   gap: 10px;
 }
 
 .header__icon {
-  background: none;
-  border: none;
+  background-color: #FF3E79;
+  border-radius: 60%;
+  border: #FF3E79;
+  width: 50px;
+  height: 40px;
   cursor: pointer;
+  margin-left: 10px;
 }
+
 
 .header__icon img {
   width: 22px;
   height: 22px;
-}
-
-
-.header__icon--request {
-  display: none;   /* it's hidden on mobile */
 }
 
 .main {
@@ -53,7 +59,7 @@ body {
 .services__title {
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-top: 3px;
 }
 
 .services__menu {
@@ -64,18 +70,22 @@ body {
 }
 
 .services__menu-item {
-  border: 1px solid #ccc;
-  border-radius: 20px;
+  border: none;
+  border-radius: 6px;
   background: none;
   padding: 6px 12px;
   white-space: nowrap;
   cursor: pointer;
   flex-shrink: 0;
+  justify-content: flex-start;
 }
 
 .services__menu-item:hover {
-  background-color: #f1f1f1;
+  border:  2px solid #B8FFEC;
 }
+.services__menu-item::selection {
+   border:  2px solid #B8FFEC;
+}  /* not sure this does anything?*/
 
 .services__content {
   display: flex;
@@ -89,7 +99,7 @@ body {
 
 .services__readmore {
   display: inline-block;
-  color: #00aa7f;
+  color: #1B1C21;
   font-weight: 700;
   text-decoration: none;
   margin-top: 0.5rem;
@@ -101,15 +111,60 @@ body {
   display: block;
 }
 
+/*mobile*/
+
+@media (max-width: 320px){
+ .header__icon--call {
+  display: none;
+ }
+
+ .header__icon--chat {
+  display: none;
+ }
+
+ .header__icon--profile {
+  display: none;
+ }
+
+ .services__menu-item {
+  width: 246;
+height: 40;
+top: 176px;
+left: 16px;
+opacity: 1;
+border-radius: 6px;
+border-width: 2px;
+rotation: -180deg;
+
+ }
+
+ .marker {
+  width: 306px;
+ }
+
+ p {
+  width: 288;
+height: 72;
+top: 240px;
+left: 16px;
+opacity: 1;
+rotation:-180deg;
+ }
+
+
+ }
+
 /* TABLET / DESKTOP */
-@media (min-width: 768px) {
+@media (max-width: 800px) {
   .header {
     padding: 12px 40px;
   }
-
-  .header__icon--menu {
-    display: none; 
-  }
+/*Why is the divider not appearing??!!*/
+  .divider {
+  width: 2%;
+  height: 32px;
+  color: rgb(114, 112, 112);
+ }
 
   .header__icon--request {
     display: inline-block; 
@@ -137,10 +192,11 @@ body {
   .services__title {
     font-size: 1.8rem;
   }
+
 }
 
 /* LARGE SCREEN */
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   body {
     max-width: 1200px;
     margin: 0 auto;
@@ -150,12 +206,33 @@ body {
     padding: 20px 80px;
   }
 
+   .header__icon--menu {
+    display: none; 
+  }
+
+   .header__icon--call {
+  display: none;
+ }
+
+ .header__icon--chat {
+  display: none;
+ }
+
+ .header__icon--profile {
+  display: none;
+ }
   .services__title {
     font-size: 2rem;
   }
 
   .services__text p {
-    font-size: 1.1rem;
+    font-size: 14px;
+    width: 490;
+height: 160;
+top: 188.22px;
+left: 35px;
+opacity: 1;
+
   }
 
   .services__menu-item {
@@ -163,10 +240,13 @@ body {
     padding: 8px 16px;
   }
 
+
+
   .services__image img {
     max-width: 500px;
   }
 }
+
 
 
 

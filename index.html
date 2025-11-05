@@ -9,26 +9,37 @@
 <body class="page">
   <header class="header">
     <button class="header__icon header__icon--menu" aria-label="Menu">
-      <img src="./img/icon-menu.svg" alt="Menu" />
+      <img src="./icons/ic-burger.svg" alt="Menu" />
     </button>
     <div class="header__logo">
-      <img src="./img/logo-cps.svg" alt="CPS Logo" />
+      <img src="./icons/ic-Logo.svg" alt="CPS Logo" />
     </div>
-    <div class="header__icons-group">
-      <button class="header__icon header__icon--request" aria-label="Request">
-        <img src="./img/icon-request.svg" alt="Request icon" />
+    <div class="header__icons header__icon--group">
+      <button class="header__icon header__icon--call" aria-label="Request">
+        <img src="./icons/ic-call.svg" alt="Call icon" />
       </button>
+      <button class="header__icon header__icon--chat" aria-label="Request">
+        <img src="./icons/ic-chat.svg" alt="Chat icon" />
+      </button>
+      <button class="header__icon header__icon--profile" aria-label="Request">
+        <img src="./icons/ic-profile.svg" alt="Profile icon" />
+      </button>
+      <div class="divider"></div>
       <button class="header__icon header__icon--repair" aria-label="Repair status">
-        <img src="./img/icon-repair.svg" alt="Repair icon" />
+        <img src="./icons/ic-Repair.svg" alt="Repair icon" />
       </button>
       <button class="header__icon header__icon--search" aria-label="Search">
-        <img src="./img/icon-search.svg" alt="Search icon" />
+        <img src="./icons/ic-search..svg" alt="Search icon" />
       </button>
     </div>
   </header>
   <main class="main">
+    
     <section class="services">
+      <div class="marker">
+      <img class="highlight" src="./icons/ic-highlight.svg" alt="highlight">
       <h1 class="services__title">Services and support</h1>
+      </div>
       <nav class="services__menu">
         <button class="services__menu-item">Devices we repair</button>
         <button class="services__menu-item">Additional services</button>
@@ -37,17 +48,21 @@
       </nav>
       <div class="services__content">
         <div class="services__text">
-          <p>
+          
+        <p>
             We are an authorised service centre for Dell equipment repairs. Only with us can you repair your Dell laptop with the official manufacturer’s warranty.
           </p>
           <p>
             We have been successfully operating since 1992 and have earned a reputation as a reliable partner.
           </p>
+          <div class="more">
+          <img src="./icons/ic-arrows.svg" alt="arrows">
           <a href="#" class="services__readmore">Read more</a>
+          </div>  
         </div>
 
         <figure class="services__image">
-          <img src="./img/cps-image.jpg" alt="CPS Logo Sign" />
+          <img src="./img/img.png" alt="CPS Logo Sign" />
         </figure>
       </div>
     </section>
