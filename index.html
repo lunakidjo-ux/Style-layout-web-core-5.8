@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
     <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CPS Services and Support</title>
@@ -36,10 +37,36 @@
   <main class="main">
     
     <section class="services">
-      <div class="marker">
-      <img class="highlight" src="./icons/ic-highlight.svg" alt="highlight">
-      <h1 class="services__title">Services and support</h1>
-      </div>
+       <div class="services__header">
+ <div class="marker">
+ <img
+ class="highlight"
+ src="./icons/ic-highlight.svg"
+ alt="highlight"
+ />
+ <h1 class="services__title">Services and support</h1>
+ </div>
+ <div class="services__header-buttons">
+ <div class="services__header-buttons-item">
+ <span>Submit a request</span>
+ <button
+ class="header__icon header__icon--repair"
+ aria-label="Repair status"
+ >
+ <img src="./icons/ic-Repair.svg" alt="Repair icon" />
+</button>
+ </div>
+ <div class="services__header-buttons-item">
+ <span>Repair status</span>
+ <button
+ class="header__icon header__icon--search"
+ aria-label="Search"
+ >
+ <img src="./icons/ic-search..svg" alt="Search icon" />
+ </button>
+ </div>
+ </div>
+ </div>
       <nav class="services__menu">
         <button class="services__menu-item">Devices we repair</button>
         <button class="services__menu-item">Additional services</button>

@@ -27,7 +27,7 @@ body {
 }
 
 .header__logo img {
-  height: 28px;
+  height: 40px;
 }
 
 .header__icons {
@@ -40,10 +40,13 @@ body {
   background-color: #FF3E79;
   border-radius: 60%;
   border: #FF3E79;
-  width: 50px;
+  width: 40px;
   height: 40px;
   cursor: pointer;
   margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -111,60 +114,13 @@ body {
   display: block;
 }
 
-/*mobile*/
-
-@media (max-width: 320px){
- .header__icon--call {
-  display: none;
- }
-
- .header__icon--chat {
-  display: none;
- }
-
- .header__icon--profile {
-  display: none;
- }
-
- .services__menu-item {
-  width: 246;
-height: 40;
-top: 176px;
-left: 16px;
-opacity: 1;
-border-radius: 6px;
-border-width: 2px;
-rotation: -180deg;
-
- }
-
- .marker {
-  width: 306px;
- }
-
- p {
-  width: 288;
-height: 72;
-top: 240px;
-left: 16px;
-opacity: 1;
-rotation:-180deg;
- }
-
-
- }
 
 /* TABLET / DESKTOP */
 @media (max-width: 800px) {
   .header {
     padding: 12px 40px;
   }
-/*Why is the divider not appearing??!!*/
-  .divider {
-  width: 2%;
-  height: 32px;
-  color: rgb(114, 112, 112);
- }
+
 
   .header__icon--request {
     display: inline-block; 
@@ -193,17 +149,53 @@ rotation:-180deg;
     font-size: 1.8rem;
   }
 
+ .divider {
+  width: 1px;
+  height: 32px;
+  color: lightgray;
+  border: none;
+ }
+
+  .header__icon--call,
+  .header__icon--chat,
+  .header__icon--profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services__header-buttons {
+    display: none;
+  }
 }
 
 /* LARGE SCREEN */
-@media (min-width: 800px) {
+@media (min-width: 1120px) {
   body {
     max-width: 1200px;
     margin: 0 auto;
   }
 
   .header {
-    padding: 20px 80px;
+    display: none;
+  }
+
+  .services__header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+
+  .services__header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .services__header-buttons-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
    .header__icon--menu {
