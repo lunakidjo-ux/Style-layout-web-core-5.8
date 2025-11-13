@@ -113,6 +113,47 @@ body {
   border-radius: 8px;
   display: block;
 }
+ /*mobile*/
+@media (max-widthl: 320px){
+ .header__icon--call {
+  display: none;
+ }
+
+ .header__icon--chat {
+  display: none;
+ }
+
+ .header__icon--profile {
+  display: none;
+ }
+
+ .services__menu-item {
+  width: 246;
+height: 40;
+top: 176px;
+left: 16px;
+opacity: 1;
+border-radius: 6px;
+border-width: 2px;
+rotation: -180deg;
+
+ }
+
+ .marker {
+  width: 306px;
+ }
+
+ p {
+  width: 288;
+height: 72;
+top: 240px;
+left: 16px;
+opacity: 1;
+rotation:-180deg;
+ }
+
+
+ }
 
 
 /* TABLET / DESKTOP */
